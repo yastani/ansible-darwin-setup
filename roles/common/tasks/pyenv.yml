@@ -1,0 +1,37 @@
+---
+- name: Mac Setup to pyenv
+  # https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html#local-playbooks
+  hosts: 127.0.0.1
+  connection: local
+  # https://docs.ansible.com/ansible/latest/user_guide/become.html#id1
+  # become: yes
+  vars:
+    python_version: 3.5.0
+  tasks:
+    - name: Deploy .bash_profile
+      template:
+        src: roles/common/templates/.bash_profile
+        dest: ~/.bash_profile
+        mode: 0644
+
+    - name: Source .bash_profile
+      shell: bash -lc "source ~/.bash_profile"
+
+    - name: Get python version
+      shell: bash -lc "pyenv versions | grep {{ python_version }}"
+      register: pyenv_version
+      ignore_errors: yes
+      changed_when: False
+
+    - name: Install pyenv
+      shell: bash -lc "pyenv install {{ python_version }}"
+      when: pyenv_version|failed
+
+    - name: Run global pyenv
+      shell: bash -lc "pyenv global {{ python_version }}"
+      when: pyenv_version|failed
+
+    - set_fact: ansible_python_interpreter=~/.pyenv/shims/python
+
+    - pip: name=pip_pkg
+      ignore_errors: yes
