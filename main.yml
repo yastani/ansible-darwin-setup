@@ -1,0 +1,4 @@
+---
+- import_playbook: roles/common/tasks/homebrew.yml
+- import_playbook: roles/common/tasks/osx-default.yml
+- import_playbook: roles/common/tasks/pyenv.yml
