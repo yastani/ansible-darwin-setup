@@ -28,6 +28,7 @@
       - sourcetree
       - java
       - java8
+      - zoomus
     brew_packages:
       - autoconf
       - awscli
@@ -51,6 +52,9 @@
       - rbenv
       - nodeenv
       - goenv
+      - tfenv
+      - circleci
+      - kubernetes-cli
 
     # pre_tasks:
     ## https://brew.sh/

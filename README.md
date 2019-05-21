@@ -35,7 +35,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 ### 5. masterブランチをzipで落として解凍する
 
 ```
-$ curl -LOk https://github.com/yastani/mac_setup/archive/master.zip
+$ curl -LOk https://github.com/yastani/ansible-setup-macos/archive/master.zip
 $ unzip -jd ansible-setup-macos master.zip
 ```
 
