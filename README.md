@@ -1,4 +1,4 @@
-# ansible-setup-macos
+# ansible-darwin-setup
 
 ## 目的
 
@@ -35,14 +35,14 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 ### 5. masterブランチをzipで落として解凍する
 
 ```
-$ curl -LOk https://github.com/yastani/ansible-setup-macos/archive/master.zip
-$ unzip -jd ansible-setup-macos master.zip
+$ curl -LOk https://github.com/yastani/ansible-darwin-setup/archive/master.zip
+$ unzip -jd ansible-darwin-setup master.zip
 ```
 
 ### 6. Ansible playbookを実行
 
 ```
-$ cd $(find ~/ * 2> /dev/null | grep -e \s*ansible-setup-macos$)
+$ cd $(find ~/ * 2> /dev/null | grep -e \s*ansible-darwin-setup$)
 $ cat << EOF > inventories/localhost/hosts
 [localhost]
 127.0.0.1
