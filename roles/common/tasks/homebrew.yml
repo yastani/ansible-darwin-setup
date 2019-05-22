@@ -55,6 +55,7 @@
       - tfenv
       - circleci
       - kubernetes-cli
+      - aws-iam-authenticator
 
     # pre_tasks:
     ## https://brew.sh/
