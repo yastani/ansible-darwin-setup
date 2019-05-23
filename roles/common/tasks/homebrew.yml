@@ -33,8 +33,6 @@
       - autoconf
       - awscli
       - bash-completion
-      - docker-compose
-      - docker-machine
       - doxygen
       - git
       - git-lfs
@@ -56,6 +54,8 @@
       - circleci
       - kubernetes-cli
       - aws-iam-authenticator
+      - kubectx
+      - docker
 
     # pre_tasks:
     ## https://brew.sh/
