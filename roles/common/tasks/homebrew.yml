@@ -26,9 +26,10 @@
       - intellij-idea-ce
       - atom
       - sourcetree
-      - java
-      - java8
       - zoomus
+      - minikube
+      - virtualbox
+      - google-cloud-sdk
     brew_packages:
       - autoconf
       - awscli
@@ -56,6 +57,9 @@
       - aws-iam-authenticator
       - kubectx
       - docker
+      - skaffold
+      - kubernetes-helm
+      - stern
 
     # pre_tasks:
     ## https://brew.sh/
