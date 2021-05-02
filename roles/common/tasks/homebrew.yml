@@ -14,7 +14,6 @@
       - alfred
       - clipy
       - docker
-      - firefox
       - google-chrome
       - google-japanese-ime
       - google-hangouts
@@ -37,6 +36,7 @@
       - doxygen
       - git
       - git-lfs
+      - gpg
       - jq
       - nmap
       - openssl
@@ -46,11 +46,6 @@
       - wget
       - zsh
       - zsh-syntax-highlighting
-      - pyenv
-      - pyenv-virtualenv
-      - rbenv
-      - nodeenv
-      - goenv
       - tfenv
       - circleci
       - kubernetes-cli
